@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img class="avatar" src="../../assets/img/registrar.png" alt="Imagen de registro">
+    <ion-item>
+      <ion-label>
+        <ion-icon name="mail-outline"></ion-icon>
+      </ion-label>
+      <ion-input [(ngModel)]="datos.correo" id="username" type="text" placeholder="Correo electrónico *" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <ion-icon name="lock-open-outline"></ion-icon>
+      </ion-label>
+        <ion-input [(ngModel)]="datos.password" id="password" type="password" placeholder="Contraseña *" required></ion-input>      
+    </ion-item>      
+
+    <ion-item>
+      <ion-label>
+        <ion-icon name="lock-open-outline"></ion-icon>
+      </ion-label>
+        <ion-input id="confirmPassword" type="password" placeholder="Confirmar Contraseña *" required></ion-input>      
+    </ion-item>        
+
+    <ion-button type="submit" expand="block" color="dark" (click)="registrar()">Registrarse</ion-button>
+    <ion-button class="registrar" type="submit" expand="block" color="dark" routerLink="../login">Regresar</ion-button>
+</ion-content>

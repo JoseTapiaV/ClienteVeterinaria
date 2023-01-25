@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+
+    <div>
+      <img class="avatar"
+        src="../../assets/img/login.png"
+        alt="Imagen inicio de sesion">
+
+        <ion-item >
+          <ion-icon name="person-circle-outline"></ion-icon>
+          <ion-input [(ngModel)] ="credenciales.correo" type="text" placeholder="Ingrese su Usuario" class="user" id="username" required=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-input [(ngModel)]="credenciales.password" type="password" placeholder="Ingrese su Contraseña" class="contra" id="password" required=""></ion-input>
+        </ion-item>
+
+        <ion-button class="ingresar" expand="block" color="dark" (click) ="login()">Ingresar</ion-button>
+
+      <ion-button class="registrar" type="submit" expand="block" color="dark" routerLink="../registro">Registrarse</ion-button>
+    </div>
+  </div>
+</ion-content>
