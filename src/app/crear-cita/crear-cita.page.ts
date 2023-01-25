@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder } from "@angular/forms";
 import { CitaService } from '../servicios/cita.service';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-crear-cita',
@@ -16,8 +15,7 @@ export class CrearCitaPage implements OnInit {
   constructor(
     private citaService: CitaService,
     private router: Router,
-    public fb: FormBuilder,
-    private  firebase : AngularFirestoreCollection
+    public fb: FormBuilder
   ) { }
 
   ngOnInit() {
@@ -32,11 +30,10 @@ export class CrearCitaPage implements OnInit {
     if (!this.citaForm.valid) {
       return false;
     } else {      
-      this.citaService.create(this.citaForm.value).then(() => {
-        console.log('Cita creada exitosamente!')
+      this.citaService.create(this.citaForm.value);
+      console.log('Cita creada exitosamente!');
         this.citaForm.reset();
         this.router.navigate(['/citas']);
-      });
     }
     return true;
   }
