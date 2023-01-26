@@ -15,19 +15,31 @@
     <ion-item *ngFor="let cita of citas" class="user-list">
       <ion-label>
         <h5>
-          <ion-icon name="person"></ion-icon> {{cita.paciente}}
+          <ion-icon name="person-circle-outline"></ion-icon> &nbsp; {{cita.nombre}}
         </h5>
         <p>
-          <ion-icon name="mail-outline"></ion-icon> {{cita.correo}}
+          <ion-icon name="phone-portrait-outline"></ion-icon> &nbsp; {{cita.numCel}}
         </p>
         <p>
-          <ion-icon name="call"></ion-icon> {{cita.celular}}
+          <ion-icon name="paw-outline"></ion-icon> &nbsp; {{cita.nombreMascota}}
+        </p>
+        <p>
+          <ion-icon name="paw-outline"></ion-icon> &nbsp; {{cita.edadMascota}}
+        </p>
+        <p>
+          <ion-icon name="paw-outline"></ion-icon> &nbsp; {{cita.tipoMascota}}
+        </p>
+        <p>
+          <ion-icon name="paw-outline"></ion-icon> &nbsp; {{cita.razaMascota}}
+        </p>
+        <p>
+          <ion-icon name="calendar-number-outline"></ion-icon> &nbsp; {{cita.fecha}}
+        </p>
+        <p>
+          <ion-icon name="alarm-outline"></ion-icon> &nbsp; {{cita.hora}}
         </p>
       </ion-label>
       <div item-end>
-        <button ion-button clear [routerLink]="['/editar-cita/', cita.id]">
-          <ion-icon name="create" style="zoom:2.0; background-color: white;"></ion-icon>
-        </button>
         <button ion-button clear (click)="deleteCita(cita.id)">
           <ion-icon name="trash" style="zoom:2.0; background-color: white"></ion-icon>
         </button>

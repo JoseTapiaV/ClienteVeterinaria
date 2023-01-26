@@ -11,6 +11,8 @@ import { Cita } from '../entidades/Cita';
 })
 export class CrearCitaPage implements OnInit {
 
+  date = new Date().toISOString().split('T')[0];
+  time = new Date().toISOString().split('T')[1];
   id!: any;
   datos: Cita = { 
     nombre: '',
@@ -19,6 +21,8 @@ export class CrearCitaPage implements OnInit {
     edadMascota: '',
     tipoMascota: '',
     razaMascota: '',
+    fecha: this.date,
+    hora: this.time,
     idDocotor: this.id
   }
 
