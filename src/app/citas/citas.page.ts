@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CitaService } from '../servicios/cita.service';
 import { map } from 'rxjs/operators';
-import { Cita } from '../entidades/Cita';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -14,8 +13,10 @@ export class CitasPage implements OnInit {
   handlerMessage = '';
   roleMessage = '';
 
-  constructor(private citaService: CitaService,
-              private alertController: AlertController) { }
+  constructor(
+    private citaService: CitaService,
+    private alertController: AlertController
+  ) { }
 
   ngOnInit() {
     this.listAllCitas();  

@@ -34,6 +34,14 @@ const routes: Routes = [
   {
     path: 'crear-cita',
     loadChildren: () => import('./crear-cita/crear-cita.module').then( m => m.CrearCitaPageModule)
+  },
+  {
+    path: 'crear-pacientes',
+    loadChildren: () => import('./crear-pacientes/crear-pacientes.module').then( m => m.CrearPacientesPageModule)
+  },
+  {
+    path: 'editar-paciente/:id',
+    loadChildren: () => import('./editar-paciente/editar-paciente.module').then( m => m.EditarPacientePageModule)
   }
 ];
 

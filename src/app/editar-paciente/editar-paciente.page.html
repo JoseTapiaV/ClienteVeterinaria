@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title> Editar mascota </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+    <form [formGroup]="pacienteForm" (ngSubmit)="updatePaciente()">
+
+      <ion-item>
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-input placeholder="Ingrese su nombre" formControlName="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="phone-portrait-outline"></ion-icon>
+        <ion-input placeholder="Ingrese su celular" formControlName="numCel"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="paw-outline"></ion-icon>
+        <ion-input placeholder="Ingrese el nombre de su mascota" formControlName="nombreMascota"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="paw-outline"></ion-icon>
+        <ion-input placeholder="Ingrese la edad de su mascota" formControlName="edadMascota"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="paw-outline"></ion-icon>
+        <ion-input placeholder="Ingrese el tipo de mascota" formControlName="tipoMascota"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="paw-outline"></ion-icon>
+        <ion-input placeholder="Ingrese la raza de su mascota" formControlName="razaMascota"></ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="dark" shape="full" expand="block">Actualizar mascota</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="danger" shape="full" expand="block" routerLink="/mi-info">Cancelar</ion-button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+  </ion-list>
+</ion-content>
