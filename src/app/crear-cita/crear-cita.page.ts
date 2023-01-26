@@ -13,9 +13,12 @@ export class CrearCitaPage implements OnInit {
 
   id!: any;
   datos: Cita = { 
-    paciente:'',
-    correo: '',
-    celular: '',
+    nombre: '',
+    numCel: '',
+    nombreMascota: '',
+    edadMascota: '',
+    tipoMascota: '',
+    razaMascota: '',
     idDocotor: this.id
   }
 

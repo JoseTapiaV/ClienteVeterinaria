@@ -9,7 +9,6 @@ export class AppComponent {
   public appPages = [
     { title: 'Doctores', url: '/doctores', icon: 'bandage' },
     { title: 'Mis citas', url: '/citas', icon: 'calendar' },
-    { title: 'Mi información', url: '/mi-info', icon: 'paw' },
     { title: 'Cerrar Sesión', url: '/logut', icon: 'close' },
   ];
   constructor() {}

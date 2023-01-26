@@ -7,7 +7,9 @@ import { Paciente } from '../entidades/Paciente';
   providedIn: 'root'
 })
 export class PacienteService {
-  private dbPath = '/Doctores/lf6YltsypOuS6JChzWWo/Pacientes';
+
+  idUSER = localStorage.getItem("IDUSER")
+  private dbPath = '/Clientes/'+this.idUSER;
   pacientesRef: AngularFirestoreCollection<Paciente>;
 
   constructor(private db: AngularFirestore) {

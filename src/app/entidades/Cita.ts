@@ -1,6 +1,9 @@
 export class Cita {    
-    paciente: string = '';
-    correo: string = '';
-    celular: string = '';
+    nombre: string = '';
+    numCel: string = '';
+    nombreMascota: string = '';
+    edadMascota: string = '';
+    tipoMascota: string = '';
+    razaMascota: string = '';
     idDocotor: string | null = '';
 }

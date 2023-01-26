@@ -11,22 +11,43 @@
   <ion-list lines="full">
 
       <ion-item>
-        <ion-label position="floating">Paciente</ion-label>
-        <ion-input [(ngModel)]="datos.paciente"  type="text" required></ion-input>
+        <ion-icon name="person-circle-outline"></ion-icon> &nbsp; 
+        <ion-input placeholder="Nombre" [(ngModel)]="datos.nombre"  type="text" required></ion-input>
       </ion-item>
+
       <ion-item>
-        <ion-label position="floating">Correo</ion-label>
-        <ion-input [(ngModel)]="datos.correo" type="text" required>
+        <ion-icon name="phone-portrait-outline"></ion-icon> &nbsp;
+        <ion-input placeholder="Celular" [(ngModel)]="datos.numCel" type="text" required>
         </ion-input>
       </ion-item>
+
       <ion-item>
-        <ion-label position="floating">Celular</ion-label>
-        <ion-input [(ngModel)]="datos.celular" type="text" required>
+        <ion-icon name="paw-outline"></ion-icon> &nbsp;
+        <ion-input placeholder="Nombre de la mascota" [(ngModel)]="datos.nombreMascota" type="text" required>
         </ion-input>
       </ion-item>
+
+      <ion-item>
+        <ion-icon name="paw-outline"></ion-icon> &nbsp;
+        <ion-input placeholder='Edad de la mascota' [(ngModel)]="datos.edadMascota" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="paw-outline"></ion-icon> &nbsp;
+        <ion-input placeholder="Tipo de mascota" [(ngModel)]="datos.tipoMascota" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="paw-outline"></ion-icon> &nbsp;
+        <ion-input placeholder="'Raza de mascota" [(ngModel)]="datos.razaMascota" type="text" required>
+        </ion-input>
+      </ion-item>
+
       <ion-row>
         <ion-col>
-          <ion-button type="submit" color="primary" shape="full" expand="block" (click)="saveCita()">Agendar Cita</ion-button>
+          <ion-button type="submit" color="dark" shape="full" expand="block" (click)="saveCita()">Agendar Cita</ion-button>
         </ion-col>
       </ion-row>
       <ion-row>

@@ -9,34 +9,40 @@ import { NavController, ToastController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
+  idUsuario: any;
+
   credenciales = {
     correo: "",
-    password:""
+    password: ""
   }
   constructor(private auth: AuthService,
-              private toastController: ToastController,
-              public navController: NavController) { }
+    private toastController: ToastController,
+    public navController: NavController
+  ) { }
 
   ngOnInit() {
   }
 
-   async login(){
+  async login() {
     console.log(this.credenciales);
     const respuesta = await this.auth.login(this.credenciales.correo, this.credenciales.password).catch(
       error => {
         this.mostrarMensaje("Usuario o Contraseña invalidos.")
       });
-    if(respuesta){
+    if (respuesta) {
+      this.idUsuario = respuesta.user?.uid
+      console.log('--------->', this.idUsuario);
+      localStorage.setItem("IDUSER", this.idUsuario);
       this.mostrarMensaje("Bienvenido!!")
       this.navController.navigateRoot('doctores')
     }
   }
 
-  async mostrarMensaje(mensaje: any){
+  async mostrarMensaje(mensaje: any) {
     const toast = await this.toastController.create({
       position: 'top',
       message: mensaje,
-      duration:3000
+      duration: 3000
     });
     toast.present();
   }
