@@ -6,10 +6,37 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-  
-
 
 <ion-content>
   
+  <ion-item *ngFor="let doctor of doctores" class="user-list">
+    <ion-label>
+      <h5>
+        <ion-icon name="person"></ion-icon> &nbsp; {{doctor.nombre}} 
+      </h5>
+      <h5>
+        <ion-icon name="person"></ion-icon> &nbsp; {{doctor.apellido}}
+      </h5>
+      <p>
+        <ion-icon name="home-outline"></ion-icon> &nbsp; {{doctor.direccion}}
+      </p>
+      <p>
+        <ion-icon name="mail-outline"></ion-icon> &nbsp; {{doctor.email}}
+      </p>
+      <p>
+        <ion-icon name="business-outline"></ion-icon> &nbsp; {{doctor.empresa}}
+      </p>
+      <p>
+        <ion-icon name="phone-portrait-outline"></ion-icon> &nbsp; {{doctor.telefono}}
+      </p>
+    </ion-label>
+
+    <div item-end>
+      <button ion-button clear [routerLink]="['/crear-cita', doctor.id]">
+        <ion-icon name="add-circle-outline" style="zoom:2.0; background-color: white;"></ion-icon> 
+      </button>
+    </div>
+
+  </ion-item>
 
 </ion-content>

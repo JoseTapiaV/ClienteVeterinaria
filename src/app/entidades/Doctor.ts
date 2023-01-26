@@ -1,6 +1,6 @@
 export class Doctor {    
-    nombres: string = '';
-    apellidos: string = '';
+    nombre: string = '';
+    apellido: string = '';
     direccion: string = '';
     email: string = '';
     empresa: string = '';

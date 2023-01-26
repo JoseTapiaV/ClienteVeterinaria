@@ -32,7 +32,7 @@ const routes: Routes = [
     loadChildren: () => import('./logut/logut.module').then( m => m.LogutPageModule)
   },
   {
-    path: 'crear-cita',
+    path: 'crear-cita/:id',
     loadChildren: () => import('./crear-cita/crear-cita.module').then( m => m.CrearCitaPageModule)
   },
   {

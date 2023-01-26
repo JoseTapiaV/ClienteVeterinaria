@@ -7,7 +7,9 @@ import { Cita } from '../entidades/Cita';
   providedIn: 'root'
 })
 export class CitaService {
-  private dbPath = '/Doctores/lf6YltsypOuS6JChzWWo/Citas';
+  
+  idDoc = localStorage.getItem("ID")
+  private dbPath = '/Doctores/'+this.idDoc+'/Citas';
   citasRef: AngularFirestoreCollection<Cita>;
 
   constructor(private db: AngularFirestore) {    

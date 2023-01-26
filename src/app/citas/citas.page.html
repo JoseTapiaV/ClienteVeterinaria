@@ -1,8 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Citas Medicas App
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Tus citas</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,10 +15,13 @@
     <ion-item *ngFor="let cita of citas" class="user-list">
       <ion-label>
         <h5>
-          <ion-icon name="person"></ion-icon> {{cita.fecha}}
+          <ion-icon name="person"></ion-icon> {{cita.paciente}}
         </h5>
         <p>
-          <ion-icon name="call"></ion-icon> {{cita.hora}}
+          <ion-icon name="mail-outline"></ion-icon> {{cita.correo}}
+        </p>
+        <p>
+          <ion-icon name="call"></ion-icon> {{cita.celular}}
         </p>
       </ion-label>
       <div item-end>
@@ -30,9 +34,5 @@
       </div>
     </ion-item>
   </ion-list>  
-  
-  <ion-button expand="full" routerLink="/crear-cita" color="primary">
-    <ion-icon name="add-circle-outline"></ion-icon>    
-  </ion-button>
   
 </ion-content>
