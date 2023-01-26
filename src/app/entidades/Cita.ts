@@ -7,5 +7,6 @@ export class Cita {
     razaMascota: string = '';
     fecha: string = '';
     hora: string = '';
+    foto: string = '';
     idDocotor: string | null = '';
 }

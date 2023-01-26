@@ -10,61 +10,80 @@
 <ion-content>
   <ion-list lines="full">
 
-      <ion-item>
-        <ion-icon name="person-circle-outline"></ion-icon> &nbsp; 
-        <ion-input placeholder="Nombre" [(ngModel)]="datos.nombre"  type="text" required></ion-input>
-      </ion-item>
+    <ion-item>
+      <ion-icon name="person-circle-outline"></ion-icon> &nbsp;
+      <ion-input placeholder="Nombre" [(ngModel)]="datos.nombre" type="text" required></ion-input>
+    </ion-item>
 
-      <ion-item>
-        <ion-icon name="phone-portrait-outline"></ion-icon> &nbsp;
-        <ion-input placeholder="Celular" [(ngModel)]="datos.numCel" type="text" required>
-        </ion-input>
-      </ion-item>
+    <ion-item>
+      <ion-icon name="phone-portrait-outline"></ion-icon> &nbsp;
+      <ion-input placeholder="Celular" [(ngModel)]="datos.numCel" type="text" required>
+      </ion-input>
+    </ion-item>
 
-      <ion-item>
-        <ion-icon name="paw-outline"></ion-icon> &nbsp;
-        <ion-input placeholder="Nombre de la mascota" [(ngModel)]="datos.nombreMascota" type="text" required>
-        </ion-input>
-      </ion-item>
+    <ion-item>
+      <ion-icon name="paw-outline"></ion-icon> &nbsp;
+      <ion-input placeholder="Nombre de la mascota" [(ngModel)]="datos.nombreMascota" type="text" required>
+      </ion-input>
+    </ion-item>
 
-      <ion-item>
-        <ion-icon name="paw-outline"></ion-icon> &nbsp;
-        <ion-input placeholder='Edad de la mascota' [(ngModel)]="datos.edadMascota" type="text" required>
-        </ion-input>
-      </ion-item>
+    <ion-item>
+      <ion-icon name="paw-outline"></ion-icon> &nbsp;
+      <ion-input placeholder='Edad de la mascota' [(ngModel)]="datos.edadMascota" type="text" required>
+      </ion-input>
+    </ion-item>
 
-      <ion-item>
-        <ion-icon name="paw-outline"></ion-icon> &nbsp;
-        <ion-input placeholder="Tipo de mascota" [(ngModel)]="datos.tipoMascota" type="text" required>
-        </ion-input>
-      </ion-item>
+    <ion-item>
+      <ion-icon name="paw-outline"></ion-icon> &nbsp;
+      <ion-input placeholder="Tipo de mascota" [(ngModel)]="datos.tipoMascota" type="text" required>
+      </ion-input>
+    </ion-item>
 
-      <ion-item>
-        <ion-icon name="paw-outline"></ion-icon> &nbsp;
-        <ion-input placeholder="Raza de mascota" [(ngModel)]="datos.razaMascota" type="text" required>
-        </ion-input>
-      </ion-item>
+    <ion-item>
+      <ion-icon name="paw-outline"></ion-icon> &nbsp;
+      <ion-input placeholder="Raza de mascota" [(ngModel)]="datos.razaMascota" type="text" required>
+      </ion-input>
+    </ion-item>
 
-      <ion-label>Selecciona una fecha</ion-label>
-      <ion-item>
-        <ion-datetime presentation="date" [(ngModel)]="date" displayFormat="DD-MM-YYYY"></ion-datetime>
-      </ion-item>
+    <ion-label>Selecciona una fecha</ion-label>
+    <ion-item>
+      <ion-datetime presentation="date" [(ngModel)]="date" displayFormat="DD-MM-YYYY"></ion-datetime>
+    </ion-item>
 
-      <ion-label>Selecciona una hora: </ion-label>
-      <ion-item>
-        <ion-datetime presentation="time" [(ngModel)]="time" displayFormat="hh:mm" ></ion-datetime>
-      </ion-item>
+    <ion-label>Selecciona una hora: </ion-label>
+    <ion-item>
+      <ion-datetime presentation="time" [(ngModel)]="time" displayFormat="hh:mm"></ion-datetime>
+    </ion-item>
 
-      <ion-row>
-        <ion-col>
-          <ion-button type="submit" color="dark" shape="full" expand="block" (click)="saveCita()">Agendar Cita</ion-button>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-button type="submit" color="danger" shape="full" expand="block" routerLink="/doctores">Cancelar</ion-button>
-        </ion-col>
-      </ion-row>
-      
+    <ion-item>
+      <ion-label class="normal">
+        Foto refencial:
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button>
+          <label for="file-upload">
+            <ion-icon slot="icon-only" name="images"></ion-icon>
+          </label>
+          <input (change)="newImageUpload($event)" id="file-upload" style="display: none" type="file" accept="image/*">
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+    <ion-item>
+      <img class="image" [src]="datos.foto">
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="dark" shape="full" expand="block" (click)="saveCita()">Agendar
+          Cita</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" shape="full" expand="block"
+          routerLink="/doctores">Cancelar</ion-button>
+      </ion-col>
+    </ion-row>
+
   </ion-list>
 </ion-content>
